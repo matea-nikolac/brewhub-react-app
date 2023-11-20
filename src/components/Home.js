@@ -4,6 +4,10 @@ import personOne from '../images/person-1.jpeg'
 import personTwo from '../images/person-2.jpeg'
 import personThree from '../images/person-3.jpeg'
 
+import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
+
+
 const Home = () => {
 
   return(
@@ -17,14 +21,14 @@ const Home = () => {
           <h2 className='coffee-title'>HOT COFFEE</h2>
           <img className="coffee-img" src={hotCoffeeImage} alt="Hot Coffee"/>
           <div className="button-container">
-            <button>Discover</button>
+          <Button to="/hot-coffee" as={Link} className='btn-discover'>Discover</Button>
           </div>
         </div>
         <div className="coffee-container">
           <h2 className='coffee-title'>ICED COFFEE</h2>
           <img className="coffee-img" src={icedCoffeeImage} alt="Iced Coffee"/>
           <div className="button-container">
-            <button>Discover</button>
+            <Button to="/iced-coffee" as={Link} className='btn-discover'>Discover</Button>
           </div>
         </div>
       </section>
