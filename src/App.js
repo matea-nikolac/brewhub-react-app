@@ -15,11 +15,11 @@ const App = () => {
         <PageNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path='/hot-coffee' element={<HotCoffeeIndex />} />
-          <Route path='/iced-coffee' element={<IcedCoffeeIndex />} />
-          <Route path='/iced-coffee/:coffeeId' element={<IcedCoffeeSingle />} />
-          <Route path='/hot-coffee/:coffeeId' element={<HotCoffeeSingle />} />
-          <Route path='*' element = { <PageNotFound />} />
+          <Route path="/hot-coffee" element={<HotCoffeeIndex />} />
+          <Route path="/iced-coffee" element={<IcedCoffeeIndex />} />
+          <Route path="/iced-coffee/:coffeeId" element={<IcedCoffeeSingle />} />
+          <Route path="/hot-coffee/:coffeeId" element={<HotCoffeeSingle />} />
+          <Route path="*" element = { <PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
