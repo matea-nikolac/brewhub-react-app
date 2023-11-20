@@ -42,7 +42,7 @@ const HotCoffeeSingle = () => {
               const { id, image, title } = coffee;
               if (id !== 20) {
               return (
-                <Col key={id} lg="4" md="6" sm="12" className='hot-coffee-column'>
+                <Col key={id} lg="4" md="6" sm="12" className='coffee-column'>
                   <Link to={`/hot-coffee/${id}`}>
                     <Card>
                       <div className="card-image" style={{ backgroundImage: `url('${image}')` }}></div>
