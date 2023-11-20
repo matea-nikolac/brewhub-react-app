@@ -9,3 +9,12 @@ main {
   padding: 2em 0;
   font-family: 'Arial', sans-serif;
 }
+
+.footer{
+  background-color: white; /* Change the background color as needed */
+  color: $primary; /* Change the text color as needed */
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+}

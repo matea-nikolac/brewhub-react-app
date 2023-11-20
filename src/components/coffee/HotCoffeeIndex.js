@@ -9,16 +9,17 @@ import Spinner from '../common/Spinner';
 import Error from '../common/Error';
 
 const HotCoffeeSingle = () => {
-  const [coffeeData, setCoffeeData] = useState([]);
+  const [coffee, setCoffee] = useState([]);
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const getCoffee = async () => {
       try {
         const response = await axios.get('https://api.sampleapis.com/coffee/hot');
-        setCoffeeData(response.data);
+        setCoffee(response.data);
         console.log(response);
       } catch (error) {
-        console.log(error);
+        setError(error.message)
       }
     };
     getCoffee();
@@ -34,13 +35,13 @@ const HotCoffeeSingle = () => {
           <Col xs="12" className="intro-text">
             <p className="text-center">Explore our selection of hot coffees and find your perfect brew. Each cup is crafted with care to bring you a delightful coffee experience.</p>
           </Col>
-          {coffeeData.length > 0 &&
-            coffeeData.map((coffee) => {
+          {coffee.length > 0 ?
+            coffee.filter(coffee => coffee.title && coffee.description && coffee.image && coffee.title !== 'a').map((coffee) => {
               const { id, image, title } = coffee;
               if (id !== 20) {
               return (
                 <Col key={id} lg="4" md="6" sm="12" className='hot-coffee-column'>
-                  <Link to={`/iced-coffee/${id}`}>
+                  <Link to={`/hot-coffee/${id}`}>
                     <Card>
                       <div className="card-image" style={{ backgroundImage: `url('${image}')` }}></div>
                       <Card.Body>
@@ -51,7 +52,16 @@ const HotCoffeeSingle = () => {
                 </Col>
               );
               }
-            })}
+            })
+          :
+          <>
+          {error?
+            <Error error={error} /> 
+            :
+            <Spinner />
+          }
+          </>
+          }
           
         </Row>
       </Container>
