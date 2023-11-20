@@ -1,0 +1,114 @@
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1, h2, p {
+    text-align: center;
+  }
+
+  .container-1{
+    background-color: $primary;
+    width: 100%;
+    color: white;
+    margin-bottom: 50px;
+    padding: 20px 0;
+  }
+  
+  .container-hot-cold-coffee{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    .coffee-container{
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 85%;
+      margin: 0 10px;
+      flex-direction: column;
+
+      img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+      }
+
+      .coffee-title {
+        position: absolute;
+        top: 30%;
+        color: white;
+        z-index: 1
+      }
+    }
+
+    .button-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+
+      button {
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 8px 50px;
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: white;
+        color: $primary;
+
+      }
+    }
+  }
+  
+  .customer-reviews{
+    h2{
+      color: $primary;
+    }
+    .reviews{
+      display: flex;
+      justify-content: center;
+      margin: 10px 50px;
+
+      .review{
+        border: 1px solid $primary;
+        margin: 10px;
+        padding: 30px 2px;
+        p{
+          margin-top: 30px;
+          text-align: center;
+          padding: 0 40px;
+          color: black;
+          color: $primary;
+        }
+        img {
+          border-radius: 50%;
+          width: 90px;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  footer{
+    background-color: white; /* Change the background color as needed */
+    color: $primary; /* Change the text color as needed */
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
