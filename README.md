@@ -4,7 +4,7 @@
 ## Description
 This React app is my project for creating a BrewHub platform, where users can explore and discover various types of brews. The app is built with React and utilizes external APIs to showcase details about different brews.
 
-##Deployment link
+## Deployment link
 [Explore BrewHub](https://main--illustrious-naiad-be01ed.netlify.app/)
 
 
