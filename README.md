@@ -27,11 +27,8 @@ Before commencing the coding process, a wireframe was designed to outline the es
 * Home Page: The homepage features a navigation bar with links for "Home," "Explore Brews," and "About." It provides users with easy navigation and access to the main sections of the app.
 * Explore Brews Page: Users can explore a variety of brews, including details such as type, flavor profile, and origin. The page allows filtering based on brew type and search functionality.
 * Specific Brew Page: Clicking on a specific brew redirects users to a dedicated page showcasing detailed information, including ingredients, brewing process, and user reviews.
-
-<img width="1483" alt="Screenshot 2023-11-21 at 15 28 23" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/0b5a3d37-2868-4b2f-afdd-cd1d4017ae63">
-
-<img width="998" alt="Screenshot 2023-11-21 at 15 29 07" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/6240667b-c45c-4fec-b610-101442dc23d8">
   
+<img width="944" alt="Screenshot 2023-11-21 at 15 54 22" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/6e6de0ba-dd17-41b1-b5da-cb70a8318e47">
 
 ## Build Process
 The project started with setting up the router configuration in the App component. The `BrowserRouter` component from React Router was used to handle the routing functionality. Different routes were defined for the home page, explore brews page, specific brew page, error page, loading page, and a page not found component.
@@ -54,4 +51,4 @@ The component features a search bar that allows users to dynamically filter the 
 ### Coffee Cards
 Each coffee is presented as a card with an associated image, title, and a link to view more details. The images are dynamically loaded based on the coffee's ID, providing a visually appealing representation.
 
-
+<img width="771" alt="Screenshot 2023-11-21 at 15 57 16" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/351538c4-c131-4405-a4f2-23ec74884be1">
