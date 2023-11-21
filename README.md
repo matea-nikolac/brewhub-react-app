@@ -7,7 +7,6 @@ This React app is my project for creating a BrewHub platform, where users can ex
 ## Deployment link
 [Explore BrewHub](https://main--illustrious-naiad-be01ed.netlify.app/)
 
-
 ## Technologies Used
 * React
 * JSX
@@ -17,9 +16,9 @@ This React app is my project for creating a BrewHub platform, where users can ex
 * HTML
   
 ## Brief Requirements
-Consume a public API
-Have several components
-The app can have a router - with several "pages"
+* Consume a public API
+* Have several components
+* The app can have a router - with several "pages"
 
 ## Planning
 Before commencing the coding process, a wireframe was designed to outline the essential pages and features of BrewHub. The wireframe includes:
@@ -34,7 +33,7 @@ Before commencing the coding process, a wireframe was designed to outline the es
   
 
 ## Build Process
-The project started with setting up the router configuration in the App component. The BrowserRouter component from React Router was used to handle the routing functionality. Different routes were defined for the home page, explore brews page, specific brew page, error page, loading page, and a page not found component.
+The project started with setting up the router configuration in the App component. The `BrowserRouter` component from React Router was used to handle the routing functionality. Different routes were defined for the home page, explore brews page, specific brew page, error page, loading page, and a page not found component.
 
 ### Router configuration
 
@@ -42,7 +41,7 @@ The project started with setting up the router configuration in the App componen
 
 ### Initial Data Fetching
 
-The HotCoffeeIndex.js and IcedCoffeeIndex.js components utilize the useEffect() hook to make an initial API request to fetch data about hot coffees. The retrieved data is then sorted alphabetically by title before being displayed to the user.
+The `HotCoffeeIndex.js` and `IcedCoffeeIndex.js` components utilize the `useEffect` hook to make an initial API request to fetch data about hot coffees. The retrieved data is then sorted alphabetically by title before being displayed to the user.
 
 <img width="757" alt="Screenshot 2023-11-21 at 15 37 24" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/a5493e88-f714-40ca-aa2c-aa872836cd8b">
 
@@ -53,3 +52,5 @@ The component features a search bar that allows users to dynamically filter the 
 
 ### Coffee Cards
 Each coffee is presented as a card with an associated image, title, and a link to view more details. The images are dynamically loaded based on the coffee's ID, providing a visually appealing representation.
+
+
