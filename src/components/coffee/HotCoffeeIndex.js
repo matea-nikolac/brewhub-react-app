@@ -10,6 +10,13 @@ import Card from 'react-bootstrap/Card';
 import Spinner from '../common/Spinner';
 import Error from '../common/Error';
 
+import Macchiato from '../../images/macchiato.jpeg'
+import Lungo from '../../images/lungo.webp'
+import Espresso from '../../images/espresso.jpeg'
+import Ristretto from '../../images/ristretto.webp'
+import IrishCoffee from '../../images/irish-coffee.jpeg'
+import Cortadito from '../../images/cortadito.jpeg'
+
 const HotCoffeeSingle = () => {
   const [coffee, setCoffee] = useState([]);
   const [error, setError] = useState('')
@@ -45,7 +52,7 @@ const HotCoffeeSingle = () => {
                 <Col key={id} lg="4" md="6" sm="12" className='coffee-column'>
                   <Link to={`/hot-coffee/${id}`}>
                     <Card>
-                      <div className="card-image" style={{ backgroundImage: `url('${image}')` }}></div>
+                      <div className="card-image" style={{ backgroundImage: `url('${id === 19? Cortadito : id === 17? IrishCoffee : id === 13? Ristretto: id === 5? Espresso: id === 11? Macchiato: id === 10? Lungo : image}')` }}></div>
                       <Card.Body>
                         <Card.Text>{title.toUpperCase()}</Card.Text>
                       </Card.Body>

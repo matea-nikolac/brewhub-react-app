@@ -9,6 +9,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import ColdBrew from '../../images/cold-brew.webp'
+import IcedExpresso from '../../images/iced-espresso.webp'
+import Frappucino from '../../images/frappuccino.jpeg'
+import Nitro from '../../images/nitro.avif'
+
 const IcedCoffeeSingle = () => {
 
   const [coffee, setCoffee] = useState([])
@@ -38,7 +43,7 @@ const IcedCoffeeSingle = () => {
                 <h2 className="single-coffee-title display-4 mb-4">{coffee.title?.toUpperCase()}</h2>
               </Col>
               <Col className="single-coffee-img-container" md="12">
-                <img className="single-coffee-img" src={coffee.image} alt={coffee.title} />
+                <img className="single-coffee-img" src={coffee.id === 5? Nitro : coffee.id === 2 ? IcedExpresso : coffee.id === 3 ? ColdBrew : coffee.id === 4 ? Frappucino : coffee.image} alt={coffee.title} />
               </Col>
               <Col className="single-coffee-details">
                 <h4>DESCRIPTION</h4>
