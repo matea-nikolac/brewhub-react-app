@@ -23,11 +23,12 @@ const HotCoffeeIndex = () => {
   const [error, setError] = useState('')
   const [query, setQuery] = useState('')
   const [filteredCoffee, setFilteredCoffee] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState('')
 
   useEffect(() => {
     const getCoffee = async () => {
       try {
+        setLoading(true)
         const response = await axios.get('https://api.sampleapis.com/coffee/hot');
         const sortedData = response.data.sort((a, b) => a.title > b.title? 1 : -1)
         setCoffee(sortedData);
@@ -50,7 +51,7 @@ const HotCoffeeIndex = () => {
     const searchQuery = () => {
       const newArray = [...coffee]
       const fitleredArray = newArray.filter((item) => (
-        item.title.toLowerCase().includes(query)
+        item.title.toLowerCase().includes(query.toLowerCase())
       ))
       setFilteredCoffee(fitleredArray)
     }
@@ -63,6 +64,15 @@ const HotCoffeeIndex = () => {
       <main>
         <Container>
           <Row>
+            <Col className="h1-coffee-column" xs="12">
+              <h1 className="h1-coffee display-4 mb-8 text-center">HOT COFFEE</h1>
+            </Col>
+            <Col xs="12" className="intro-text">
+              <p className="text-center">
+                Explore our selection of hot coffees and find your perfect brew. Each cup is crafted
+                with care to bring you a delightful coffee experience.
+              </p>
+            </Col>
             <Col xs="12" className="search-container">
               <div className="search-wrapper">
                 <FaSearch className="search-icon" />
@@ -72,15 +82,6 @@ const HotCoffeeIndex = () => {
                   onChange={handleChange}
                 />
               </div>
-            </Col>
-            <Col className="h1-coffee-column" xs="12">
-              <h1 className="h1-coffee display-4 mb-8 text-center">HOT COFFEE</h1>
-            </Col>
-            <Col xs="12" className="intro-text">
-              <p className="text-center">
-                Explore our selection of hot coffees and find your perfect brew. Each cup is crafted
-                with care to bring you a delightful coffee experience.
-              </p>
             </Col>
             {loading ? (
               <Spinner />
