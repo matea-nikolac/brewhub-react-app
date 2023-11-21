@@ -56,7 +56,7 @@ const HotCoffeeIndex = () => {
     }
     searchQuery()
 
-    },[query])
+    },[query, coffee])
 
 
     return (
@@ -91,7 +91,9 @@ const HotCoffeeIndex = () => {
                     coffee.title &&
                     coffee.description &&
                     coffee.image &&
-                    coffee.title !== 'a'
+                    coffee.title !== 'a' &&
+                    coffee.title !== 'Apelsinjuice'&&
+                    coffee.title !== 'Svart Te'
                 )
                 .map((coffee) => {
                   const { id, image, title } = coffee;
@@ -127,6 +129,8 @@ const HotCoffeeIndex = () => {
                         </Link>
                       </Col>
                     );
+                  } else {
+                    return null
                   }
                 })
             ) : (
