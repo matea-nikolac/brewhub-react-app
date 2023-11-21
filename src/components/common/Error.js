@@ -1,7 +1,7 @@
-const Error = () => {
+const Error = ({error}) => {
 
   return(
-    <h1>Error</h1>
+    <p className="text-center danger" style={{ color: 'red' }}>{error}</p>
   )
 
 }

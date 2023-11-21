@@ -18,3 +18,49 @@ main {
   width: 100%;
   margin-top: 50px;
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #555;
+}
+
+.search-element {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px 35px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.search-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
+
+.spinner img {
+  width: 100px;
+}
