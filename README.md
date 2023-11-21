@@ -8,12 +8,13 @@ This React app is my project for creating a BrewHub platform, where users can ex
 [Explore BrewHub](https://main--illustrious-naiad-be01ed.netlify.app/)
 
 ## Technologies Used
+* CSS
+* HTML
 * React
+* JavaScript
 * JSX
 * Axios
-* CSS
 * Bootstrap
-* HTML
   
 ## Brief Requirements
 * Consume a public API
