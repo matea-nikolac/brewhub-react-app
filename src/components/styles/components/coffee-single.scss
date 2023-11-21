@@ -23,11 +23,12 @@
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+
   p {
-    // padding: 0 70px;
-    margin: 5px;
-    width: 700px;
+    padding: 0 10px;
+    width: 100%;
   }
+
   h4{
     padding: 20px 0;
     border-bottom: 1px solid $primary; /* Add a solid bottom border */
@@ -35,3 +36,9 @@
   }
 }
 
+@media (min-width: 660px){
+  .single-coffee-details p {
+    margin: 5px;
+    width: 700px;
+  }
+}

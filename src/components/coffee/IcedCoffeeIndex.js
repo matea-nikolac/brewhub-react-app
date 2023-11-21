@@ -88,7 +88,7 @@ const IcedCoffeeSingle = () => {
                 if (id !== 20) {
                   return (
                     <Col key={id} lg="4" md="6" sm="12" className="coffee-column">
-                      <Link to={`/hot-coffee/${id}`}>
+                      <Link to={`/iced-coffee/${id}`}>
                         <Card>
                           <div
                             className="card-image"

@@ -37,14 +37,19 @@ main {
   color: #555;
 }
 
-.search-element {
-  width: 90%;
-  max-width: 300px;
-  padding: 10px 35px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.search-container {
+  display: flex;
+  justify-content: center;
+
+  .search-element {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 35px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 }
 
 .search-button {
@@ -63,4 +68,8 @@ main {
 
 .spinner img {
   width: 100px;
+}
+
+@media (min-width: 660px){
+
 }
