@@ -52,9 +52,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <footer className="footer">
-        <p>&copy; 2023 BrewHub. All rights reserved.</p>
-      </footer>
     </main>
   )
 
