@@ -23,11 +23,12 @@ const HotCoffeeIndex = () => {
   const [error, setError] = useState('')
   const [query, setQuery] = useState('')
   const [filteredCoffee, setFilteredCoffee] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState('')
 
   useEffect(() => {
     const getCoffee = async () => {
       try {
+        setLoading(true)
         const response = await axios.get('https://api.sampleapis.com/coffee/hot');
         const sortedData = response.data.sort((a, b) => a.title > b.title? 1 : -1)
         setCoffee(sortedData);
@@ -50,7 +51,7 @@ const HotCoffeeIndex = () => {
     const searchQuery = () => {
       const newArray = [...coffee]
       const fitleredArray = newArray.filter((item) => (
-        item.title.toLowerCase().includes(query)
+        item.title.toLowerCase().includes(query.toLowerCase())
       ))
       setFilteredCoffee(fitleredArray)
     }

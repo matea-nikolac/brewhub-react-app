@@ -47,7 +47,7 @@ const IcedCoffeeSingle = () => {
   useEffect(() => {
     const searchQuery = () => {
       const newArray = [...coffee];
-      const filteredArray = newArray.filter((item) => item.title.toLowerCase().includes(query));
+      const filteredArray = newArray.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()));
       setFilteredCoffee(filteredArray);
     };
     searchQuery();

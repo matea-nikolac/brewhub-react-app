@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# BrewHub React App
+<img width="1437" alt="Screenshot 2023-11-21 at 15 20 55" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/501275cb-83af-402b-a36e-da41ee4f9378">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This React app is my project for creating a BrewHub platform, where users can explore and discover various types of brews. The app is built with React and utilizes external APIs to showcase details about different brews.
 
-## Available Scripts
+## Deployment link
+[Explore BrewHub](https://main--illustrious-naiad-be01ed.netlify.app/)
 
-In the project directory, you can run:
+## Technologies Used
+* CSS
+* HTML
+* React
+* JavaScript
+* JSX
+* Axios
+* Bootstrap
+  
+## Brief Requirements
+* Consume a public API
+* Have several components
+* The app can have a router - with several "pages"
 
-### `npm start`
+## Planning
+Before commencing the coding process, a wireframe was designed to outline the essential pages and features of BrewHub. The wireframe includes:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Home Page: The homepage features a navigation bar with links for "Home," "Explore Brews," and "About." It provides users with easy navigation and access to the main sections of the app.
+* Explore Brews Page: Users can explore a variety of brews, including details such as type, flavor profile, and origin. The page allows filtering based on brew type and search functionality.
+* Specific Brew Page: Clicking on a specific brew redirects users to a dedicated page showcasing detailed information, including ingredients, brewing process, and user reviews.
+  
+<img width="944" alt="Screenshot 2023-11-21 at 15 54 22" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/6e6de0ba-dd17-41b1-b5da-cb70a8318e47">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Build Process
+The project started with setting up the router configuration in the App component. The `BrowserRouter` component from React Router was used to handle the routing functionality. Different routes were defined for the home page, explore brews page, specific brew page, error page, loading page, and a page not found component.
 
-### `npm test`
+### Router configuration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="764" alt="Screenshot 2023-11-21 at 15 35 19" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/e9e254a1-07b3-4ac8-ae69-63f4ecd9a039">
 
-### `npm run build`
+### Initial Data Fetching
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `HotCoffeeIndex.js` and `IcedCoffeeIndex.js` components utilize the `useEffect` hook to make an initial API request to fetch data about hot coffees. The retrieved data is then sorted alphabetically by title before being displayed to the user.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="757" alt="Screenshot 2023-11-21 at 15 37 24" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/a5493e88-f714-40ca-aa2c-aa872836cd8b">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Search Functionality
+The component features a search bar that allows users to dynamically filter the displayed coffees based on their search queries. The `handleChange` function is triggered on input change, updating the query state and triggering a re-render with the filtered results.
 
-### `npm run eject`
+<img width="647" alt="Screenshot 2023-11-21 at 15 38 27" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/dbc41f4b-a26f-4543-bc52-048b0d7a4778">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Coffee Cards
+Each coffee is presented as a card with an associated image, title, and a link to view more details. The images are dynamically loaded based on the coffee's ID, providing a visually appealing representation.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="771" alt="Screenshot 2023-11-21 at 15 57 16" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/351538c4-c131-4405-a4f2-23ec74884be1">
