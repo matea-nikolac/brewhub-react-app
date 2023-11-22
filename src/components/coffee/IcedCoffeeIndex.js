@@ -57,6 +57,12 @@ const IcedCoffeeSingle = () => {
     <main>
       <Container>
         <Row>
+          <Col className="h1-coffee-column" xs="12">
+            <h1 className="h1-coffee display-4 mb-8 text-center">ICED COFFEE</h1>
+          </Col>
+          <Col xs="12" className="intro-text">
+            <p className="text-center">Explore our selection of iced coffees and find your perfect brew. Each cup is crafted with care to bring you a delightful coffee experience.</p>
+          </Col>
           <Col xs="12" className="search-container">
             <div className="search-wrapper">
               <FaSearch className="search-icon" />
@@ -66,12 +72,6 @@ const IcedCoffeeSingle = () => {
                 onChange={handleChange}
               />
             </div>
-          </Col>
-          <Col className="h1-coffee-column" xs="12">
-            <h1 className="h1-coffee display-4 mb-8 text-center">ICED COFFEE</h1>
-          </Col>
-          <Col xs="12" className="intro-text">
-            <p className="text-center">Explore our selection of iced coffees and find your perfect brew. Each cup is crafted with care to bring you a delightful coffee experience.</p>
           </Col>
           {loading ? (
             <Spinner />
