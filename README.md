@@ -1,6 +1,8 @@
 # BrewHub React App
 <img width="1437" alt="Screenshot 2023-11-21 at 15 20 55" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/501275cb-83af-402b-a36e-da41ee4f9378">
 
+<img width="1430" alt="Screenshot 2023-11-29 at 10 43 24" src="https://github.com/matea-nikolac/brewhub-react-app/assets/62067357/3d6c7658-b572-45d9-b14f-7a9ccbb5cf13">
+
 ## Description
 This React app is my project for creating a BrewHub platform, where users can explore and discover various types of brews. The app is built with React and utilizes external APIs to showcase details about different brews.
 
